@@ -1,2 +1,7 @@
 # Treasure Island
-print("Treasure Island. Lets begin coding!")
+height = int(input("Whats your height?"))
+
+if height > 150:
+    print("Youre allowed")
+else:
+    print("Not allowed")
