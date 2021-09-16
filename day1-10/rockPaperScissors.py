@@ -1,21 +1,24 @@
 import random
 
-row_1 = ["X", "X", "X"]
+user_choice = int(input("What do you choose? Type 0 for Rock, 1 for Paper or 2 for Scissors.\n"))
 
-row_2 = ["X", "X", "X"]
+ai_choice = random.randint(0, 2)
 
-row_3 = ["X", "X", "X"]
+valid_choices = ["Rock", "Paper", "Scissors"]
 
-map = [row_1, row_2, row_3]
+if user_choice == ai_choice:
+    print(f"It's a tie! you both choose: {valid_choices[user_choice]}")
+elif valid_choices[user_choice] == "Rock" and valid_choices[ai_choice] == "Scissors":
+    print(f"You won! Your: {valid_choices[user_choice]} beats the AI's: {valid_choices[ai_choice]}")
+elif valid_choices[user_choice] == "Scissors" and valid_choices[ai_choice] == "Paper":
+    print(f"You won! Your: {valid_choices[user_choice]} beats the AI's: {valid_choices[ai_choice]}")
+elif valid_choices[user_choice] == "Paper" and valid_choices[ai_choice] == "Rock":
+    print(f"You won! Your: {valid_choices[user_choice]} beats the AI's: {valid_choices[ai_choice]}")
+elif valid_choices[ai_choice] == "Rock" and valid_choices[user_choice] == "Scissors":
+    print(f"You lost! Your: {valid_choices[user_choice]} looses to the AI's: {valid_choices[ai_choice]}")
+elif valid_choices[ai_choice] == "Scissors" and valid_choices[user_choice] == "Paper":
+    print(f"You lost! Your: {valid_choices[user_choice]} looses to the AI's: {valid_choices[ai_choice]}")
+elif valid_choices[ai_choice] == "Paper" and valid_choices[user_choice] == "Rock":
+    print(f"You lost! Your: {valid_choices[user_choice]} looses to the AI's: {valid_choices[ai_choice]}")
 
-print(f"{row_1}\n{row_2}\n{row_3}")
-
-position = input("Where do you want to put the treasure? ex. 21 for 2 X and 1 Y")
-
-pos_x = position[1]
-
-pos_y = position[0]
-
-selected = map[int(pos_x) - 1][int(pos_y) - 1] = "O"
-
-print(f"{row_1}\n{row_2}\n{row_3}")
+# TODO, Make into object that has its name as first key then the item it beats as its value.
