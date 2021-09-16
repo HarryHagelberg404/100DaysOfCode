@@ -1,8 +1,7 @@
 import random
 
-if random.randint(0, 1) == 1:
-    coin_state = "Heads"
-else:
-    coin_state = "Tails"
+people_list = ["Krille", "Ogge", "Harry"]
 
-print(f"The coin flipped to a: {coin_state}")
+random_int = random.randint(0, 2)
+
+print(f"The person who is paying for dinner is: {people_list[random_int]}")
