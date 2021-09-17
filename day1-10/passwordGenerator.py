@@ -1,14 +1,13 @@
 # Password Generator
-fruits = input("Student heights spaced:\n").split()
 
-for n in range(0, len(fruits)):
-    fruits[n] = int(fruits[n])
-print(fruits)
+highscores = input("Write a list of highscores separated by ' ':s down below:\n").split()
 
-# calculate mean
-mean = 0
-for n in range(0, len(fruits)):
-    mean += fruits[n]
+top_highscore = 0
+for n in range(0, len(highscores)):
+    curr_score = int(highscores[n])
+    if curr_score > top_highscore:
+        top_highscore = curr_score
 
-mean /= len(fruits)
-print(f"Total mean of students:{mean}")
+print("The list of highscores:")
+print(highscores)
+print(f"The highest score:{top_highscore}")
