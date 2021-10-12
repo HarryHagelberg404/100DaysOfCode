@@ -14,3 +14,31 @@
 #   Y GAME OVER
 #   N The user keeps guessing
 
+# ------- START OF FILE -------
+import random
+# Generate a random word:
+word_list = ["Sweden", "Denmark", "Norway", "Finland", "Iceland", "New Zealand"]
+word = word_list[random.randint(0, len(word_list) - 1)]
+
+word = "New Zealand"
+
+# Generate the equal amount of letters as blanks
+hidden_word = ""
+blank = "-"
+space = " "
+for index in range(0, len(word)):
+    letter = word[index]
+    if letter == space:
+        hidden_word += space
+    hidden_word += blank
+
+
+print(word)
+print(hidden_word)
+
+# Ask the user to guess a letter:
+
+
+# Check if the letter exists:
+
+
